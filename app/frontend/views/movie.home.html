@@ -1,0 +1,39 @@
+<div class="row" id="movies"> <!-- movie list -->
+  <div class="wrap">
+    <div class="col-xs-12">
+
+      <ul>
+        <li ng-repeat="movie in controller.movies">
+
+          <div class="card-header"> <!-- card header -->
+            <h4>{{movie.episode}}</h4>
+            <p>{{movie.title}} <span>({{movie.release}})</span></p>
+          </div> <!-- end card header -->
+
+          <div class="card-body"> <!-- card body -->
+            <img ng-src="{{movie.poster}}" alt="{{movie.episode}}: {{movie.title}}">
+          </div> <!-- end card body -->
+
+          <div class="card-footer"> <!-- card footer -->
+            <div class="row">
+              <div class="col-xs-8">
+                <p>Director: {{movie.director}}</p>
+              </div>
+              <div class="col-xs-4">
+                <p>{{movie.rating}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>{{movie.synopsis}}</p>
+                <a href="{{movie.link}}" class="custom-btn">View</a>
+              </div>
+            </div>
+          </div> <!-- end card footer -->
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div> <!-- end movie list -->

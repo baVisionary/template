@@ -1,0 +1,1 @@
+var app;!function(app){!function(Services){var Service=function(){function Service(){}return Service}();Services.Service=Service,angular.module("app").service("service",Service)}(app.Services||(app.Services={}))}(app||(app={}));

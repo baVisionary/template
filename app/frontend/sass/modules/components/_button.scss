@@ -1,0 +1,21 @@
+/* CUSTOM BUTTON (LINK) STYLE */
+
+.custom-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px -2px $dark;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  background-color: #28B463;
+  font-family: $heading-font-1;
+  font-size: 14px;
+  color: $white !important;
+  border-radius: $radius;
+  transition: $trans;
+}
+
+.custom-btn:hover {
+  background-color: #3498DB;
+}

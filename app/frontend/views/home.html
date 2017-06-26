@@ -1,0 +1,50 @@
+<div class="row" id="questions">
+  <!-- movie list -->
+  <div class="wrap">
+    <div class="col-xs-12">
+      <h2>{{questions[0].category}}</h2>
+      <ul>
+        <li ng-repeat="q in controller.questions">
+
+          <div class="card-header">
+            <!-- card header -->
+            <h4>{{q.question}}</h4>
+            <p>{{q.type}}</p>
+          </div>
+          <!-- end card header -->
+
+          <div class="card-body">
+            <!-- card body -->
+            <!--<img ng-src="{{movie.poster}}" alt="{{movie.episode}}: {{movie.title}}">-->
+          </div>
+          <!-- end card body -->
+
+          <div class="card-footer">
+            <!-- card footer -->
+            <div class="row">
+              <div class=" col-xs-2 ">
+                <p>1. </p>
+              </div>
+              <div class="col-xs-10 ">
+                <p>{{q.correct_answer}}</p>
+              </div>
+            </div>
+            <div class="row " ng-repeat="answer in question.incorrect_answers">
+              <div class="col-xs-2">
+                <p>{{$index + 2}}.</p>
+              </div>
+              <div class="col-xs-10">
+                <p>{{answer}}</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- end card footer -->
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<!-- end movie list -->

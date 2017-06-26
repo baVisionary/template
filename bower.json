@@ -1,0 +1,29 @@
+{
+  "name": "template",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Erik Larson <erik.larson@codercamps.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-resource": "^1.6.4",
+    "angular-bootstrap": "^2.5.0",
+    "angular-touch": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-messages": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}

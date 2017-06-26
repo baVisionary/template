@@ -1,0 +1,1 @@
+var app;!function(app){!function(Controllers){var HomeController=function(){return function(questionService){this.questionService=questionService,this.questions=this.questionService.getQuestions()}}();HomeController.$inject=["questionService"],Controllers.HomeController=HomeController}(app.Controllers||(app.Controllers={}))}(app||(app={}));
