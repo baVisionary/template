@@ -2,9 +2,9 @@
   <!-- movie list -->
   <div class="wrap">
     <div class="col-xs-12">
-      <h2>{{questions[0].category}}</h2>
+      <h2>{{controller.questions.results[0].category}}</h2>
       <ul>
-        <li ng-repeat="q in controller.questions">
+        <li ng-repeat="q in controller.questions.results">
 
           <div class="card-header">
             <!-- card header -->
@@ -15,7 +15,6 @@
 
           <div class="card-body">
             <!-- card body -->
-            <!--<img ng-src="{{movie.poster}}" alt="{{movie.episode}}: {{movie.title}}">-->
           </div>
           <!-- end card body -->
 
@@ -29,7 +28,7 @@
                 <p>{{q.correct_answer}}</p>
               </div>
             </div>
-            <div class="row " ng-repeat="answer in question.incorrect_answers">
+            <div class="row " ng-repeat="answer in q.incorrect_answers">
               <div class="col-xs-2">
                 <p>{{$index + 2}}.</p>
               </div>

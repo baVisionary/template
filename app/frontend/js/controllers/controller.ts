@@ -1,22 +1,13 @@
 namespace app.Controllers {
 
-  // export class HomeController {
-  //   public movies;
-
-  //   static $inject = ['movieService'];
-
-  //   constructor(private movieService) {
-  //     this.movies = this.movieService.getMovies();
-  //   }
-  // }
-
   export class HomeController {
     public questions;
 
-    static $inject = ['questionService'];
+    static $inject = ['questionService', '$stateParams'];
 
-    constructor(private questionService) {
-      this.questions = this.questionService.getQuestions();
+    constructor(private questionService, $stateParams) {
+      console.log($stateParams);
+      this.questions = this.questionService.getQs($stateParams.amount, $stateParams.category, $stateParams.difficulty, $stateParams.type);
     }
   }
 

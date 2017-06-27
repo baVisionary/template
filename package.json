@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc app/frontend/js/controllers/*.ts app/frontend/js/services/*.ts app/frontend/js/*.ts",
     "start": "node server.js"
   },
   "author": "",

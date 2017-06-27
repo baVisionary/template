@@ -3,7 +3,7 @@ var app;
     angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap']).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             .state('home', {
-            url: '/',
+            url: '/:amount/:category/:difficulty/:type',
             templateUrl: '/views/home.html',
             controller: app.Controllers.HomeController,
             controllerAs: 'controller'
