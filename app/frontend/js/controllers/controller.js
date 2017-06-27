@@ -2,21 +2,15 @@ var app;
 (function (app) {
     var Controllers;
     (function (Controllers) {
-        // export class HomeController {
-        //   public movies;
-        //   static $inject = ['movieService'];
-        //   constructor(private movieService) {
-        //     this.movies = this.movieService.getMovies();
-        //   }
-        // }
         var HomeController = (function () {
-            function HomeController(questionService) {
+            function HomeController(questionService, $stateParams) {
                 this.questionService = questionService;
-                this.questions = this.questionService.getQuestions();
+                console.log($stateParams);
+                this.questions = this.questionService.getQs($stateParams.amount, $stateParams.category, $stateParams.difficulty, $stateParams.type);
             }
             return HomeController;
         }());
-        HomeController.$inject = ['questionService'];
+        HomeController.$inject = ['questionService', '$stateParams'];
         Controllers.HomeController = HomeController;
     })(Controllers = app.Controllers || (app.Controllers = {}));
 })(app || (app = {}));

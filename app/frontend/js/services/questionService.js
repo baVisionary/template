@@ -5,19 +5,10 @@ var app;
         var QuestionService = (function () {
             function QuestionService($resource) {
                 this.$resource = $resource;
-                // sample url https://opentdb.com/api.php?amount=42&category=17&difficulty=hard
-                this._question_resource = this.$resource('https://opentdb.com/api.php?amount=10'
-                // ,{},
-                // {
-                //     askForQs: {
-                //         method: 'GET',
-                //         { amount: 10 }
-                //     }
-                // }
-                );
+                this._question_resource = this.$resource('https://opentdb.com/api.php');
             }
-            QuestionService.prototype.getQuestions = function () {
-                return this._question_resource.get();
+            QuestionService.prototype.getQs = function (amount, category, difficulty, type) {
+                return this._question_resource.get({ amount: amount, category: category, difficulty: difficulty, type: type });
             };
             return QuestionService;
         }());
