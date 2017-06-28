@@ -5,8 +5,8 @@ var app;
         var HomeController = (function () {
             function HomeController(questionService, $stateParams) {
                 this.questionService = questionService;
-                console.log($stateParams);
-                this.questions = this.questionService.getQs($stateParams.amount, $stateParams.category, $stateParams.difficulty, $stateParams.type);
+                // console.log($stateParams);
+                this.questions = this.questionService.loadQs($stateParams.amount, $stateParams.category, $stateParams.difficulty, $stateParams.type);
             }
             return HomeController;
         }());
